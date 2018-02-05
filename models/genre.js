@@ -1,4 +1,4 @@
-var mongoose = require('./mongoose');
+var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
@@ -10,7 +10,7 @@ var GenreSchema = new Schema({
 GenreSchema
     .virtual('url')
     .get(function() {
-        return '/catolog/genre/' + this._id;
+        return '/catalog/genre/' + this._id;
     });
 
 module.exports = mongoose.model('Genre', GenreSchema);
